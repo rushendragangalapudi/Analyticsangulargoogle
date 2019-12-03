@@ -1,4 +1,26 @@
-<a [routerLink]="['/user']">User</a>
-<a [routerLink]="['/loginhistory']">Login History</a>
-<a [routerLink]="['/about']">About</a>
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <!-- <button mat-icon-button>
+        <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
+        <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>Item 1</button>
+          <button mat-menu-item>Item 2</button>
+        </mat-menu>
+      </button> -->
+      <!-- <h1>SimpleCRM</h1> -->
+      <span class="menu-spacer"></span>
+      <div>
+        <a mat-button [routerLink]="'/user'"> User </a>
+        <a mat-button [routerLink]="'/loginhistory'"> Login History </a>
+        <a mat-button [routerLink]="'/about'"> About </a>
+  
+      </div>
+    </mat-toolbar-row>
+</mat-toolbar>
+
+  <!-- <a [routerLink]="'/user'"> User </a>
+    <a [routerLink]="'/loginhistory'"> Login History </a>
+    <a [routerLink]="'/about'"> About </a>
+   -->
 <router-outlet></router-outlet>

@@ -6,7 +6,9 @@ import { AppComponent } from './app.component';
 import { UserComponent } from './user/user.component';
 import { LoginHistoryComponent } from './login-history/login-history.component';
 import { AboutComponent } from './about/about.component';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatToolbarModule, MatIconModule, MatSidenavModule, MatListModule, MatButtonModule } from  '@angular/material';
+import {MatCommonModule, MatRippleModule} from '@angular/material/core';
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +18,15 @@ import { AboutComponent } from './about/about.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatSidenavModule,
+    MatListModule,
+    MatButtonModule,
+    MatCommonModule,
+    MatRippleModule
   ],
   providers: [],
   bootstrap: [AppComponent]
