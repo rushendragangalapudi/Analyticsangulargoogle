@@ -9,6 +9,8 @@ import { AboutComponent } from './about/about.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule, MatIconModule, MatSidenavModule, MatListModule, MatButtonModule } from  '@angular/material';
 import {MatCommonModule, MatRippleModule} from '@angular/material/core';
+import {MatMenuModule} from '@angular/material/menu';
+import { HttpClientModule }    from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +28,9 @@ import {MatCommonModule, MatRippleModule} from '@angular/material/core';
     MatListModule,
     MatButtonModule,
     MatCommonModule,
-    MatRippleModule
+    MatRippleModule,
+    MatMenuModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

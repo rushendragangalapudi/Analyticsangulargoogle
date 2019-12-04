@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { filter } from 'rxjs/operators';
+// import { Title }     from '@angular/platform-browser';
 declare var gtag;
 @Component({
   selector: 'app-root',
@@ -9,7 +10,9 @@ declare var gtag;
 })
 export class AppComponent {
   title = 'analyticsangulargoogle';
-  constructor(router : Router) {
+  constructor(router : Router
+    // private titleService: Title
+    ) {
     const navEndEvents = router.events.pipe(
       filter(event => event instanceof NavigationEnd)
     )
@@ -18,5 +21,8 @@ export class AppComponent {
         'page_path':  event.urlAfterRedirects
       });
     });
+  }
+  public setTitle( newTitle: string) {
+    // this.titleService.setTitle( newTitle );
   }
 }
