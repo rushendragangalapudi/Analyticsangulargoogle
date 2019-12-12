@@ -11,6 +11,7 @@ import { MatToolbarModule, MatIconModule, MatSidenavModule, MatListModule, MatBu
 import {MatCommonModule, MatRippleModule} from '@angular/material/core';
 import {MatMenuModule} from '@angular/material/menu';
 import { HttpClientModule }    from '@angular/common/http';
+import {MatTableModule} from '@angular/material/table';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,6 +31,7 @@ import { HttpClientModule }    from '@angular/common/http';
     MatCommonModule,
     MatRippleModule,
     MatMenuModule,
+    MatTableModule,
     HttpClientModule
   ],
   providers: [],

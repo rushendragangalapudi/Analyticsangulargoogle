@@ -1,3 +1,20 @@
-a {
+/* a {
     margin-left: 5px
+} */
+
+.example-container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    /* background: #eee; */
+    top: 64px;
+    bottom: 0;
 }
+mat-sidenav-content {
+    padding-left: 5px;
+}
+mat-sidenav  {
+      min-width: 125px;
+      padding-left: 5px;
+  }
+  
