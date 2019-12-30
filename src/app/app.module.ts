@@ -12,6 +12,7 @@ import {MatCommonModule, MatRippleModule} from '@angular/material/core';
 import {MatMenuModule} from '@angular/material/menu';
 import { HttpClientModule }    from '@angular/common/http';
 import {MatTableModule} from '@angular/material/table';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +33,8 @@ import {MatTableModule} from '@angular/material/table';
     MatRippleModule,
     MatMenuModule,
     MatTableModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

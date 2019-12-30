@@ -19,17 +19,33 @@ const USER_DATA: UserData[] = [
   {userId: 9, name: 'Lucas Marshall', city: 'Burke', userAccount: 'lucas'},
   {userId: 10, name: 'Chloe	Welch', city: 'Jenkins', userAccount: 'chloe'},
 ];
-
 @Component({
   selector: 'app-user',
   templateUrl: './user.component.html',
   styleUrls: ['./user.component.css']
 })
 export class UserComponent implements OnInit {
+  dataSource: any;
   displayedColumns: string[] = ['userId', 'name', 'city', 'userAccount'];
-  dataSource = USER_DATA;
-  constructor(private userService: UserService) { }
+  searchString = '';
+  // dataSource = USER_DATA;
+  constructor(private userService: UserService) { 
+    this.userService.userList().subscribe(
+      (data) => {
+        this.dataSource = data;
+          console.log(data);
+      }
+    )
+  }
   ngOnInit() {
+  }
+  searchUser() {
+    this.userService.searchUser(this.searchString).subscribe(
+    (data) => {
+      this.dataSource = data;
+        console.log(data);
+    }
+  )
   }
 
 }
